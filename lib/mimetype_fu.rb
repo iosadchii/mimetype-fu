@@ -3,7 +3,7 @@ require 'extensions_const'
 
 class File
 
-  def self.mime_type?(file)
+  def self.mime_type(file)
     case file
     when File, Tempfile
       unless RUBY_PLATFORM.include? 'mswin32'
