@@ -9,10 +9,10 @@ class File
       unless RUBY_PLATFORM.include? 'mswin32'
         mime = `file --mime -br "#{file.path}"`.strip
       else
-        mime = EXTENSIONS[File.extname(file.path).gsub('.','').downcase.to_sym]
+        mime = EXTENSIONS[File.extname(file.path).gsub('.','').downcase]
       end
     when String
-      mime = EXTENSIONS[(file[file.rindex('.')+1, file.size]).downcase.to_sym] unless file.rindex('.').nil?
+      mime = EXTENSIONS[(file[file.rindex('.')+1, file.size]).downcase] unless file.rindex('.').nil?
     when StringIO
       temp = File.open(Dir.tmpdir + '/upload_file.' + Process.pid.to_s, "wb")
       temp << file.string
