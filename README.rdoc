@@ -1,5 +1,4 @@
-MimetypeFu
-==========
+= MimetypeFu
 
 Modified version of: https://github.com/howcast/mimetype-fu
 
