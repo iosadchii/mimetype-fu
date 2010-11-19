@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     "MIT-LICENSE",
-     "README",
+     "README.md",
      "Rakefile",
      "VERSION",
      "init.rb",
