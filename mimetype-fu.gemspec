@@ -10,11 +10,10 @@ Gem::Specification.new do |s|
   s.description = %q{get the mimetype of a file directly in Ruby}
   s.email = %q{josh@vitamin-j.com}
   s.extra_rdoc_files = [
-    "README"
+    "README.rdoc"
   ]
   s.files = [
-    "MIT-LICENSE",
-     "README.md",
+     "MIT-LICENSE",
      "Rakefile",
      "VERSION",
      "init.rb",
