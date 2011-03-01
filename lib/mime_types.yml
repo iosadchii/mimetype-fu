@@ -154,7 +154,7 @@ flac: audio/x-flac
 flc: video/x-flic
 fli: video/x-flic
 flo: application/vnd.micrografx.flo
-flv: application/x-flash-video
+flv: video/x-flv
 flw: application/x-kivio
 fo: text/x-xslfo
 for: text/x-fortran
