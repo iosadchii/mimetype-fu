@@ -7,7 +7,7 @@ class File
     case file
     when File, Tempfile
       mime = `file --mime-type -br "#{file.path}"`.strip unless RUBY_PLATFORM.include? 'mswin32'
-      mime = EXTENSIONS[File.extname(file.path).gsub('.','').downcase.to_sym] if mime == 'application/octet-stream' || mime.nil?
+      mime = EXTENSIONS[File.extname(file.path).gsub('.','').downcase.tap{|str| str.empty? ? str : str.to_sym}] if mime == 'application/octet-stream' || mime.nil?
     when ActionDispatch::Http::UploadedFile
       mime = `file --mime-type -br "#{file.tempfile.path}"`.strip unless RUBY_PLATFORM.include? 'mswin32'
       mime = EXTENSIONS[File.extname(file.original_filename).gsub('.','').downcase.to_sym] if mime == 'application/octet-stream' || mime.nil?
